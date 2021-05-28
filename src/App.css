@@ -1,38 +1,96 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+body {
+  margin: 0px;
+  background-color:#ccc;
+  overflow-x: hidden;
+  font-family: "Rubik", sans-serif;
+}
+
+.sqSquare {
+  border: 1px solid #999;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+  width: 80px;
+  line-height: 80px;
+  height: 80px;
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #66e3c4;
+  margin: 10px;
+  border: 1px solid #00d09c;
+  border-radius: 5px;
+}
+
+.sqSquare:active {
+  background-color: #00d09c;
+}
+
+.gaGameInfo {
+  margin-left: 20px;
+}
+.gaStatus {
+  margin-bottom: 10px;
+}
+
+.gaTictactoe {
+  height: 100vh;
+}
+
+.gaBoard {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.gaHeading {
+  color: #5588a3;
+  margin: 1% 0;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.boBoard {
+  display: flex;
+}
+
+.gaStatus {
+  color:#eb5b3c;
+  text-align: center;
+  margin: 1% 0;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.gaGameInfo {
+  margin: 2% 0 ;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gaGameInfoButton {
+  color:#5367ff;
+  border-radius: 8px;
+  font-size: 20px;
+  padding: 15px 32px;
+  font-weight: bold;
+  background-color: #66e3c4; 
+  border: 1px solid #00d09c;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.gaMovesList {
+  list-style: none;
 }
